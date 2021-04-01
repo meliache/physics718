@@ -1,0 +1,20 @@
+name: pfp
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - pandas
+  - numba
+  - conda-forge::uproot  # read root files without depending on a root installation
+  - conda-forge::jupyterlab
+  - conda-forge::testbook  # write unittests for code in notebooks automatic
+  # machine learning
+  - scikit-learn
+  - keras
+  - pytorch::pytorch
+  - conda-forge::jax  # automatic grad, jit and run numpy functions on GPU's, made for writing NN's from scratch in python

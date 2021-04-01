@@ -1,0 +1,41 @@
+# basic checks
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+  - id: check-yaml
+  - id: trailing-whitespace
+  - id: check-added-large-files
+    args: ["--maxkb=100000"] # Set to max file size in Github
+  - id: fix-byte-order-marker
+  - id: check-merge-conflict
+  - id: check-symlinks
+
+# black auto formatter
+- repo: https://github.com/ambv/black
+  rev: stable
+  hooks:
+  - id: black
+    language_version: python3.7
+
+# flake8 style checker
+- repo: https://gitlab.com/pycqa/flake8
+  rev: 3.9.0
+  hooks:
+    - id: flake8
+      exclude: docs/bld/example/r/r_example/src/documentation/conf.py
+      additional_dependencies:
+        - flake8-bugbear
+        - flake8-builtins
+        - flake8-comprehensions
+        - flake8-deprecated
+        - flake8-docstrings
+        - flake8-eradicate
+        - flake8-print
+        - flake8-rst-docstrings
+        - pep8-naming
+        - pydocstyle
+      # Harmonizing flake8 and black
+      args:
+        - "--max-line-length=88"
+        - "--ignore=E203,E402,E501,E800,W503"
+        - "--select=B,C,E,F,W,T4,B9"

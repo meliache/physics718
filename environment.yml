@@ -16,5 +16,3 @@ dependencies:
   # machine learning
   - scikit-learn
   - keras
-  - pytorch::pytorch
-  - conda-forge::jax  # automatic grad, jit and run numpy functions on GPU's, made for writing NN's from scratch in python

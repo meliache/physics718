@@ -44,7 +44,7 @@ conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html
 - [Software Carpentry](https://software-carpentry.org/lessons/) is a website
   which offers basic software skills for researchers. I really recommend their
   courses on
-    - [Programming in Python](https://swcarpentry.github.io/python-novice-inflammation): 
+    - [Programming in Python](https://swcarpentry.github.io/python-novice-inflammation):
       Do this course if you your python is rusty, as we require familarity with the language.
     - [The Unix Shell](https://swcarpentry.github.io/shell-novice):
       I recommend working with python from a linux environment, which often

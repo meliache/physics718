@@ -1,18 +1,23 @@
-name: pfp
+name: physics718
 channels:
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
   - python=3.7
-  - numpy
-  - scipy
-  - matplotlib
-  - seaborn
-  - pandas
-  - numba
-  - conda-forge::uproot  # read root files without depending on a root installation
-  - conda-forge::jupyterlab
-  - conda-forge::testbook  # write unittests for code in notebooks automatic
+  - pylint=2.7.2  # python syntax and style checker, e.g. used by default by VSCode
+  - pre-commit=2.11.1  # enable automatic checks before each commit
+  - numpy=1.19.2
+  - scipy=1.6.2
+  - matplotlib=3.3.4
+  - seaborn=0.11.1  # matplotlib wrapper for statistical plotting
+  - pandas=1.2.3
+  - numba=0.53.1  # just-in-time compilation of python
+  - uproot=3.13.0  # read root files without having full ROOT installation
+  - jupyterlab=3.0.12
+  - testbook=0.2.6  # write unittests for functions in notebooks outside notebooks
+  - uncertainties=3.1.5  # automatic uncertainty handling, not sure if I'll use that
+  - hist=2.2.1  # fillable histogram objects for python, relatively new but I think it's cool
+  - mplhep=0.2.18  # needed by hist for their plotting functions
   # machine learning
-  - scikit-learn
-  - keras
+  - scikit-learn=0.24.1
+  - keras=2.4.3

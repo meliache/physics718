@@ -10,12 +10,12 @@
   - id: check-merge-conflict
   - id: check-symlinks
 
-# black auto formatter
-- repo: https://github.com/ambv/black
-  rev: stable
-  hooks:
-  - id: black
-    language_version: python3.7
+# # black auto formatter
+# - repo: https://github.com/ambv/black
+#   rev: stable
+#   hooks:
+#   - id: black
+#     language_version: python3.7
 
 # flake8 style checker
 - repo: https://gitlab.com/pycqa/flake8

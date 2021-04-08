@@ -17,7 +17,14 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh
 ```
 
-Then you can create the conda environment for the exercises via
+When prompted for
+
+```
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+```
+
+answer by typing `yes`. Then you can create the conda environment for the exercises via
 
 ``` bash
 conda env create --file environment.yml
@@ -26,7 +33,7 @@ conda env create --file environment.yml
 Then, you should be able to activate the conda environment with
 
 ``` bash
-conda activate pfp
+conda activate physics718
 ```
 
 With future exercise sheets, we might add python-packages to the

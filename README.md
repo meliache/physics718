@@ -15,13 +15,16 @@ On a linux 64 bit system, the following should work:
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 # run the installer and follow the instructions
 sh Miniconda3-latest-Linux-x86_64.sh
-When prompted for
-Do you wish the installer to initialize Miniconda3
-by running conda init? [yes|no] 
-answer yes
 ```
 
-Then you can create the conda environment for the exercises via
+When prompted for
+
+```
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+```
+
+answer yes. Then you can create the conda environment for the exercises via
 
 ``` bash
 conda env create --file environment.yml

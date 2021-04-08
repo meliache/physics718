@@ -24,7 +24,7 @@ Do you wish the installer to initialize Miniconda3
 by running conda init? [yes|no]
 ```
 
-answer yes. Then you can create the conda environment for the exercises via
+answer by typing `yes`. Then you can create the conda environment for the exercises via
 
 ``` bash
 conda env create --file environment.yml

@@ -33,7 +33,7 @@ conda env create --file environment.yml
 Then, you should be able to activate the conda environment with
 
 ``` bash
-conda activate pfp
+conda activate physics718
 ```
 
 With future exercise sheets, we might add python-packages to the

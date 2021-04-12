@@ -20,4 +20,4 @@ dependencies:
   - mplhep=0.2.18  # needed by hist for their plotting functions
   # machine learning
   - scikit-learn=0.24.1
-  - keras=2.4.3
+  - keras=2.3.1

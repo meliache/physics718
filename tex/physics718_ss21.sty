@@ -4,7 +4,8 @@
 \RequirePackage{multicol}
 \RequirePackage{wrapfig}
 \RequirePackage[english,ngerman]{babel}
-\RequirePackage{microtype}
+\RequirePackage{microtype} % improves typography
+\RequirePackage{parskip} % paragraphs separated by empty lines
 \RequirePackage{amssymb}
 \RequirePackage{url}
 \RequirePackage{hyperref}
@@ -17,12 +18,14 @@
 }
 % minted: highlight code-blocks with python Pygments package
 \RequirePackage{minted}
-\newminted{python}{linenos}  % defines 'pythoncode' environment for python code blocks
+\newminted{python}{}  % defines 'pythoncode' environment for python code blocks
+\newminted{bash}{}  % defines 'bashcode' environment for python code blocks
 \newmintedfile{python}{linenos} % defines '\pythonfile' shortcut for inserting
                                 % python file contents
 \newmintinline[py]{python}{}  % defines '\py{<code>}' shortcut for inserting python
-                          % code inline
-
+\newmintinline[bash]{bash}{}  % defines '\bash{<code>}'
+\definecolor{code-bg}{rgb}{0.95,0.95,0.95}
+\setminted{autogobble, bgcolor=code-bg}
 
 % typeset units
 \RequirePackage{siunitx}

@@ -1,4 +1,4 @@
-\documentclass[a4paper, parskip=full]{scrartcl}
+\documentclass[a4paper]{article}
 % load exercise-specific preamble
 \usepackage{physics718_ss21}
 
@@ -29,10 +29,58 @@
     We will repeat some basics in the first two exercises, but this can only be
     very limited in scope, so if you learned a different programming language in
     the past or are just rusty, I recommend also going through some of the many
-    python exercises on the internet, for example the \emph{Software Carpentry}
-    \href{https://swcarpentry.github.io/python-novice-inflammation}{Python Introduction}\footnote{%
+    python exercises on the internet, for example the
+    \href{https://swcarpentry.github.io/python-novice-inflammation}{Software
+      Carpentry python introduction}\footnote{%
       \url{https://swcarpentry.github.io/python-novice-inflammation}}.
-    I will collect other material for self-study on eCampus.
+  \end{instructions}
+
+  \begin{instructions}[Get familiar with the development environment]
+   Make sure you that you have properly installed the course environment with
+   \texttt{conda} and VS~Code according to the instruction
+   \href{https://ecampus.uni-bonn.de/goto_ecampus_fold_2146080.html}{%
+     on eCampus}\footnote{%
+     \url{https://ecampus.uni-bonn.de/goto_ecampus_fold_2146080.html}}.
+
+    \begin{problem*}\textbf{Python command line basics}
+
+      Open a terminal and activate the conda environment for the physics718
+      exercise via
+
+      \begin{bashcode}
+        conda activate physics718
+      \end{bashcode}
+
+      Your terminal prompt should now show \texttt{(physics718)} as your active
+      python environment. While in it, the \texttt{python} command points
+      to the python executable installed by conda instead of your default system
+      python. To deactivate the environment, use \bash{conda deactivate}.
+
+      \begin{parts}
+        \item Find the python version that your are using on the command line.
+          Bonus: Can you also find out where on the file system the python executable is located?
+        \item Type \bash{python} press \texttt{Enter}. Now you should be in an
+          interactive python interpreter. You can type a line of code, press
+          \texttt{Enter} and the code will be evaluated and the result printed.
+          This is will be your quick calculator. To test it, find out the python-result for
+          $0.1 + 0.2$ in python. Do you have an idea what might cause the
+          result?
+        \item Exit the python interpreter by executing the \py{exit()} function or typing
+          \texttt{Ctrl+d}. When given an argument, the python command can be used to run
+          python programs. Execute for example the file \texttt{zen.py} and be enlightened.
+        \item Instead of the basic python interpreter, for interactive work it
+          is better to use Jupyter, which offers auto-completion and other
+          convenience functions. Run \bash{jupyter console}
+          and import\footnote{Python imports are magic. Try \py{import
+              antigravity}}. NumPy via \py{import numpy as np}.
+
+          To find out what NumPy is and how to get more information type \texttt{np?}
+          In Jupyter the question-mark  \texttt{?} shows the
+           of help any object (e.g.\ functions, classes, \ldots). What other method can be used to access the help?
+        \item Use the \py{np.arange} and \py{np.sum} functions to find the sum of all odd numbers between 0
+          and 200. Use the help of the functions for guidance and use no other functions or operators.
+      \end{parts}
+    \end{problem*}
 
   \end{instructions}
   \begin{problem}\textbf{Data types}

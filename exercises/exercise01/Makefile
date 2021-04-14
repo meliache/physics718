@@ -3,7 +3,7 @@
 # Adapted from https://gist.github.com/dogukancagatay/2eb82b0233829067aca6 by Dogukan Cagatay <dcagatay@gmail.com>
 # Originally from : http://tex.stackexchange.com/a/40759
 
-export TEXINPUTS:=.//:../../texmf//:${TEXINPUTS}:
+export TEXINPUTS:=.//:../../tex//:${TEXINPUTS}:
 
 # Change only the variable below to the name of the main tex file.
 PROJNAME=exercise01

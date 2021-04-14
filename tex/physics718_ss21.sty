@@ -8,7 +8,14 @@
 \usepackage{amssymb}
 \usepackage{url}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
 \usepackage{listings}
+\lstset{language=Python}
 \usepackage{siunitx}
 
 \usepackage[myconfig,forcolorpaper,nosummarytotals,pointsonleft,%
@@ -48,3 +55,6 @@ nosolutions       % Uncomment this for no solutions
   \ptLabel{Pkt.}     % singular form
   \ptsLabel{Pkte.}      % plural form
 \end{verB}
+
+% This file creates the style for the header
+\include{eqexam.cfg}

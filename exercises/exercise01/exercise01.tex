@@ -1,0 +1,93 @@
+\documentclass[english,ngerman]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[english,ngerman]{babel}
+\usepackage{microtype}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage[myconfig,forcolorpaper,nosummarytotals,pointsonleft,%
+nosolutions       % Uncomment this for no solutions
+% answerkey       % Uncomment this for questions + solutions
+]{eqexam}
+% ---------------------------------------------
+% English and German versions
+% ---------------------------------------------
+\numVersions{5}
+\forVersion e     % Select the exercise group (a) Matei, (b) Svenja, (c) Supriya, (d) Maxx
+\examNum{1}       % Write number of the exercise sheet
+% ------- Main header definition -----------------------
+\longTitleText%
+{Exercise sheet \nExam a}
+{Exercise sheet \nExam b}
+{Exercise sheet \nExam c}
+{Exercise sheet \nExam d}
+{Exercise sheet \nExam e}
+\endlongTitleText%
+\shortTitleText%
+{EX\nExam a}
+{Ex\nExam b}
+{Ex\nExam c}
+{Ex\nExam d}
+{Ex\nExam e}
+\endshortTitleText%
+\title[\sExam]{\Exam}
+\vA{\author{Lecturer: Dr.\ E.\ v.\ Törne \\ Organisation: M.\ Eliachevitch \\ Tutors: \textbf{Max}, Tomasz, Niraj, Rico, Kai}}
+\vB{\author{Lecturer: Dr.\ E.\ v.\ Törne \\ Organisation: M.\ Eliachevitch \\ Tutors: Max, \textbf{Tomasz}, Niraj, Rico, Kai}}
+\vC{\author{Lecturer: Dr.\ E.\ v.\ Törne \\ Organisation: M.\ Eliachevitch \\ Tutors: Max, Tomasz, \textbf{Niraj}, Rico, Kai}}
+\vD{\author{Lecturer: Dr.\ E.\ v.\ Törne \\ Organisation: M.\ Eliachevitch \\ Tutors: Max, Tomasz, Niraj, \textbf{Rico}, Kai}}
+\vE{\author{Lecturer: Dr.\ E.\ v.\ Törne \\ Organisation: M.\ Eliachevitch \\ Tutors: Max, Tomasz, Niraj, Rico, \textbf{Kai}}}
+\university{University of Bonn}
+\subject[pythonHEP]{physics718: Python Programming in High Energy Physics}
+\date{SS 2021}
+% -----------------------------------------------------------------------------
+\begin{verB}         % Points labels in German
+  \ptLabel{Pkt.}     % singular form
+  \ptsLabel{Pkte.}      % plural form
+\end{verB}
+% ------------------------------------------------------------------------------
+% \everymath{\displaystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{eqexam.cfg}    % This file creates the style for the header
+% -------- Header --------------------------------------------------------------
+\maketitle              % This command uses the header style created in file eqexam.cfg
+\begin{center}
+  \hrule  \vspace{0.2cm}
+  \webtitle%
+  \vspace{0.2cm} \hrule
+\end{center}
+% ------- Running header --------------------------------------------------------
+\rhead{SS 21}        % Text written here appears in the running header right side
+\begin{verB}
+  \chead{-- Seite \arabic{page}\space --}
+  % \chead{-- Seite \arabic{page}\space von \eq@ExamLastPage\space--}  %this still does not work
+\end{verB}
+% -------- End Header -----------------------------------------------------------
+% ////////////////////////////////////////////////////////////////////////////
+
+\begin{exam}[Presence]{Presence}
+  % ////////////////////////////////////////////////////////////////////////////
+  \begin{problem}{\bf Functions}
+    Hello World Problem
+  \end{problem}
+  % ////////////////////////////////////////////////////////////////////////////
+  \begin{instructions}\\%[\ifAB{Presence exercises}{Anwesenheitsaufgaben}]
+    Instructions
+  \end{instructions}
+\end{exam}
+
+\newpage
+\begin{exam}[Homework]{Homework}
+  \begin{instructions}[\bf Homework]\\
+    Hello World Homework instructions
+  \end{instructions}
+
+  \begin{problem}[3]{\bf Functions} \\
+    Homework Problem
+  \end{problem}
+\end{exam}
+
+\end{document}

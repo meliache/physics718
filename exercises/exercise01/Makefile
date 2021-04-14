@@ -36,9 +36,12 @@ all: $(PROJNAME).pdf
 # -use-make tells latexmk to call make for generating missing files.
 # -interaction=nonstopmode keeps the pdflatex backend from stopping at a
 #  missing file reference and interactively asking you for an alternative.
+# -shell-escape: allows latex to execude code in the shell, which is disabled by
+#  default for security reasons. Require for the latex "minted" package which
+#  allows for syntax highlighting via the python Pygments package
 
 $(PROJNAME).pdf: $(PROJNAME).tex
-	latexmk -pdf -interaction=nonstopmode -use-make $<
+	latexmk -pdf -interaction=nonstopmode -shell-escape -use-make $<
 
 cleanall:
 	latexmk -C

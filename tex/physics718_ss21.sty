@@ -1,24 +1,33 @@
 \ProvidesPackage{physics718_ss21}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{wrapfig}
-\usepackage[english,ngerman]{babel}
-\usepackage{microtype}
-\usepackage{amssymb}
-\usepackage{url}
-\usepackage{hyperref}
+\RequirePackage{amsmath}
+\RequirePackage{graphicx}
+\RequirePackage{multicol}
+\RequirePackage{wrapfig}
+\RequirePackage[english,ngerman]{babel}
+\RequirePackage{microtype}
+\RequirePackage{amssymb}
+\RequirePackage{url}
+\RequirePackage{hyperref}
+\RequirePackage{xcolor}
+\definecolor{bonn-print-blue}{HTML}{014F9F}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=cyan,
+    urlcolor=bonn-print-blue,
 }
-\usepackage{listings}
-\lstset{language=Python}
-\usepackage{siunitx}
+% minted: highlight code-blocks with python Pygments package
+\RequirePackage{minted}
+\newminted{python}{linenos}  % defines 'pythoncode' environment for python code blocks
+\newmintedfile{python}{linenos} % defines '\pythonfile' shortcut for inserting
+                                % python file contents
+\newmintinline[py]{python}{}  % defines '\py{<code>}' shortcut for inserting python
+                          % code inline
 
-\usepackage[myconfig,forcolorpaper,nosummarytotals,pointsonleft,%
+
+% typeset units
+\RequirePackage{siunitx}
+
+\RequirePackage[myconfig,forcolorpaper,nosummarytotals,pointsonleft,%
 nosolutions       % Uncomment this for no solutions
 % answerkey       % Uncomment this for questions + solutions
 ]{eqexam}

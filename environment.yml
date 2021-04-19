@@ -5,6 +5,7 @@ channels:
 dependencies:
   - python=3.7
   - pylint=2.7.2  # python syntax and style checker, e.g. used by default by VSCode
+  - black=19.10b0  # automatic python formatter, I use it for the exercises
   - pre-commit=2.11.1  # enable automatic checks before each commit
   - numpy=1.19.2
   - scipy=1.6.2
@@ -14,6 +15,7 @@ dependencies:
   - numba=0.53.1  # just-in-time compilation of python
   - uproot=3.13.0  # read root files without having full ROOT installation
   - jupyterlab=3.0.12
+  - pytest=6.2.3
   - testbook=0.2.6  # write unittests for functions in notebooks outside notebooks
   - uncertainties=3.1.5  # automatic uncertainty handling, not sure if I'll use that
   - hist=2.2.1  # fillable histogram objects for python, relatively new but I think it's cool

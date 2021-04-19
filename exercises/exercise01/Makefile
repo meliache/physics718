@@ -41,11 +41,12 @@ all: $(PROJNAME).pdf
 #  allows for syntax highlighting via the python Pygments package
 
 $(PROJNAME).pdf: $(PROJNAME).tex
-	latexmk -pdf -interaction=nonstopmode -shell-escape -use-make $<
+	latexmk -pdf -pdflatex="pdflatex -synctex=1 -interaction=nonstopmode" -shell-escape -use-make $<
 
 cleanall:
 	latexmk -C
-	rm -vf *.aux  *.qsl  *.sol *_xdefs.cut
+	rm -vf *.aux  *.qsl  *.sol *_xdefs.cut *.bbl
+	rm -rfv _minted-exercise*
 
 clean:
 	latexmk -c

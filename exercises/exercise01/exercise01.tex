@@ -3,7 +3,7 @@
 \usepackage{physics718_ss21}
 
 % Select the exercise group
-\forVersion{e}
+\forVersion{f}
 % Write number of the exercise sheet
 \examNum{1}
 
@@ -37,12 +37,12 @@
 
   \begin{instructions}[Get familiar with the development environment]
    Make sure you that you have properly installed the course environment with
-   \texttt{conda} and VS~Code according to the instruction
+   \texttt{conda} and VS~Code according to the instructions
    \href{https://ecampus.uni-bonn.de/goto_ecampus_fold_2146080.html}{%
      on eCampus}\footnote{%
      \url{https://ecampus.uni-bonn.de/goto_ecampus_fold_2146080.html}}.
 
-    \begin{problem*}\textbf{Python command line basics}
+    \begin{problem*}\textbf{Command line basics and simple control flow}
 
       Open a terminal and activate the conda environment for the physics718
       exercise via
@@ -54,35 +54,64 @@
       Your terminal prompt should now show \texttt{(physics718)} as your active
       python environment. While in it, the \texttt{python} command points
       to the python executable installed by conda instead of your default system
-      python. To deactivate the environment, use \bash{conda deactivate}.
+      python.
 
       \begin{parts}
-        \item Find the python version that your are using on the command line.
-          Bonus: Can you also find out where on the file system the python executable is located?
-        \item Type \bash{python} press \texttt{Enter}. Now you should be in an
+        \item Type \bash{python} press \keys{\return}. Now you are in a basic
           interactive python interpreter. You can type a line of code, press
-          \texttt{Enter} and the code will be evaluated and the result printed.
-          This is will be your quick calculator. To test it, find out the python-result for
-          $0.1 + 0.2$ in python. Do you have an idea what might cause the
-          result?
-        \item Exit the python interpreter by executing the \py{exit()} function or typing
-          \texttt{Ctrl+d}. When given an argument, the python command can be used to run
-          python programs. Execute for example the file \texttt{zen.py} and be enlightened.
+          \keys{\return} and the code will be evaluated and the result printed.
+          This can be your quick calculator. Find out the python-result for
+          $0.1 + 0.2$ in python (remember how computers encode numbers). To exit
+          the python execute the \py{exit()} function or type \texttt{Ctrl+d}.
+        \item Can you find your python version in the output on the screen? Also
+          find how to print the version via a command line argument to
+          \texttt{python} (check \bash{python -h}).
+          % Bonus: Can you also find out where on the file system the python executable is located?
         \item Instead of the basic python interpreter, for interactive work it
-          is better to use Jupyter, which offers auto-completion and other
-          convenience functions. Run \bash{jupyter console}
-          and import\footnote{Python imports are magic. Try \py{import
-              antigravity}}. NumPy via \py{import numpy as np}.
+          is more convenient to use Jupyter/IPython, which offers better
+          auto-completion and help. Run \bash{jupyter console}. To print 100
+          numbers from 0 to 99 you can for example use
+          \begin{pythoncode}
+            for i in range(100):
+                print(i)
+          \end{pythoncode}
 
-          To find out what NumPy is and how to get more information type \texttt{np?}
-          In Jupyter the question-mark  \texttt{?} shows the
-           of help any object (e.g.\ functions, classes, \ldots). What other method can be used to access the help?
-        \item Use the \py{np.arange} and \py{np.sum} functions to find the sum of all odd numbers between 0
-          and 200. Use the help of the functions for guidance and use no other functions or operators.
+          Modify the code to only print odd numbers.
+
+          Hint: Use \py{if} and
+          the modulo operator \py{%}. Try out how the operator works
+          interactively, e.g.\ type \py{9 % 3}.
+          Also remember that 0's are treated as boolean \py{False} inside
+          conditions while all other numbers are \py{True}, you can validate
+          this with e.g.\ \py{print(bool(0))} and \py{print(bool(1))}.
+
+        \item In Jupyter you can find help for all python objects with documentation
+          strings via the question mark symbol \texttt{?}. To get a general
+          IPython help, just type \texttt{?} end press \keys{\return}.
+        \item Find the help for
+          the print function via \py{print?}. Add a keyword argument to the \py{print} function to print all
+          numbers in a single row.
+        \item  When given an argument, the \texttt{python} command can be used to run
+          python programs. For example, run \bash{bash zen.py} and be enlightened.
       \end{parts}
     \end{problem*}
 
+    \begin{problem}\textbf{Visual Studio Code}\\
+      Interactive environments can be useful for quick calculations and for
+      trying things out, but if you want to re-use and share your code, you need
+      to organize it into files, which is best done via an editor or integrated
+      development environment (IDE). In this course we use VS~Code, which offers
+      a python IDE via the python plugin.
+
+      Open \texttt{code} inside the conda environment
+    \end{problem}
+
+    \begin{problem}\textbf{Jupyter Notebooks}
+
+    \end{problem}
+
   \end{instructions}
+
   \begin{problem}\textbf{Data types}
     Hello World Problem
   \end{problem}

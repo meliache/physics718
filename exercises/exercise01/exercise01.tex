@@ -34,6 +34,7 @@
   \end{instructions}
 
   \begin{instructions}[Get familiar with the development environment]
+
    Make sure you that you have properly installed the course environment with
    \texttt{conda} and VS~Code according to the instructions
    \href{https://ecampus.uni-bonn.de/goto_ecampus_fold_2146080.html}{%
@@ -41,7 +42,6 @@
      \url{https://ecampus.uni-bonn.de/goto_ecampus_fold_2146080.html}}.
 
     \begin{problem*}\textbf{Command line basics and simple control flow}
-
       Open a terminal and activate the conda environment for the physics718
       exercise via
 
@@ -50,9 +50,11 @@
       \end{bashcode}
 
       Your terminal prompt should now show \texttt{(physics718)} as your active
-      python environment. While in it, the \texttt{python} command points
-      to the python executable installed by conda instead of your default system
-      python.
+      python environment. While in it, the \texttt{python} command points to the
+      python executable installed by conda instead of your default system
+      python. We will now repeat some python command line essentials that you should
+      now even though you will work inside a more graphical IDE/Jupyter
+      environment later.
 
       \begin{parts}
         \item Type \bash{python} press \keys{\return}. Now you are in a basic
@@ -63,7 +65,7 @@
           the python execute the \py{exit()} function or type \texttt{Ctrl+d}.
         \item Can you find your python version in the output on the screen? Also
           find how to print the version via a command line argument to
-          \texttt{python} (check \bash{python -h}).
+          \texttt{python} (hint> check \bash{python -h}).
           % Bonus: Can you also find out where on the file system the python executable is located?
         \item Instead of the basic python interpreter, for interactive work it
           is more convenient to use Jupyter/IPython, which offers better
@@ -85,24 +87,39 @@
 
         \item In Jupyter you can find help for all python objects with documentation
           strings via the question mark symbol \texttt{?}. To get a general
-          IPython help, just type \texttt{?} end press \keys{\return}.
-        \item Find the help for
-          the print function via \py{print?}. Add a keyword argument to the \py{print} function to print all
-          numbers in a single row.
+          IPython help, just type \texttt{?} end press \keys{\return}. Find one
+          other way to access the help of a python object. To exit the help pager, press \keys{q}.
+        \item Find the help for the print function via \py{print?}. Add a
+          keyword argument to the \py{print} function to print all numbers in a
+          single row.
         \item  When given an argument, the \texttt{python} command can be used to run
-          python programs. For example, run \bash{bash zen.py} and be enlightened.
+          python programs. Run \bash{bash zen.py} to be enlightened.
       \end{parts}
     \end{problem*}
 
-    \begin{problem}\textbf{Visual Studio Code}\\
-      Interactive environments can be useful for quick calculations and for
-      trying things out, but if you want to re-use and share your code, you need
-      to organize it into files, which is best done via an editor or integrated
-      development environment (IDE). In this course we use VS~Code, which offers
-      a python IDE via the python plugin.
-
-      Open \texttt{code} inside the conda environment
-    \end{problem}
+    \begin{problem*}\textbf{Visual Studio Code}\\
+      If you want to re-use and share your code, you need to organize it into
+      files, which is best done via an editor or integrated development
+      environment (IDE). In this course we use VS~Code, a modern extensible open
+      source editor which offers an IDE-like experience via the python extension.
+      Run \bash{code} inside the terminal with the conda environment to open
+      VS~code.
+      \begin{parts}
+      \item Open a terminal in VS code. In it you can do everything we learned
+        so far in the exercise 1. Check that the python version is 3.7 and that
+        you are in a conda environment. If not, you can also change your python
+        interpreter and environment from withing conda via \keys{Ctrl+Shift+P}
+        and typing and selecting \menu{Python: Select
+          Interpreter}\footnote{\url{https://code.visualstudio.com/docs/python/environments}}.
+      \item Open the file \texttt{exercise01\_attendance.py}. Maybe you will be
+        prompted to install the python extension. Open the extension
+        menu on the left (\keys{Ctrl+Shift+X}) and if the \emph{Python} extension is
+        not installed yet, search for it in the marketplace and install it.
+        After the exercise, feel free to look for other useful extensions.
+      \item With your newly gained knowledge, complete the functions
+        \py{is_odd(num)}.
+      \end{parts}
+    \end{problem*}
 
     \begin{problem}\textbf{Jupyter Notebooks}
 
@@ -110,27 +127,16 @@
 
   \end{instructions}
 
-  \begin{problem}\textbf{Data types}
-    Hello World Problem
-  \end{problem}
-  \begin{problem}\textbf{Assignment}
-    Hello World Problem
-  \end{problem}
-  \begin{problem}\textbf{Control flow}
-    Hello World Problem
-  \end{problem}
-  \begin{problem}\textbf{Function}
-    Hello World Problem
-  \end{problem}
 \end{exam}
 
 \newpage
 \begin{exam}[Homework]{Homework}
   \begin{instructions}[\textbf{Homework}]
-    Hello World Homework instructions
+    Let's try practice writing some functions. \texttt{exercise01_homework.py}
+    and fill C
   \end{instructions}
 
-  \begin{problem}[3]{\textbf{Functions}}
+  \begin{problem}[3]{\textbf{Newton's Method}}
     Homework Problem
   \end{problem}
 \end{exam}

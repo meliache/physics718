@@ -110,8 +110,7 @@
           Run \bash{code} inside the terminal with the conda environment to open
           VS~code.
           \begin{parts}
-          \item Find out how to open a terminal in VS code. In it you can do
-            everything we learned so far in the exercise 1. Check that the Python
+          \item Check that the Python
             version is 3.7 and that you are in a conda environment. If not, you can
             also change your Python interpreter and environment from withing conda
             via \keys{Ctrl+Shift+P} and typing and selecting \menu{Python: Select
@@ -218,7 +217,8 @@
           function $f$ and returns $f(x_1^2\ldots x_N^2) - f(x_1\ldots x_N)^2$.
         \item\PTs{2} The variance of a collection can be calculated obtained with
           \begin{equation*}
-            \mathrm{Var}(\vec{x}) = \mathrm{mean}(x_1^2\ldots x_N^2) - \mathrm{mean}(x_1\ldots x_N)^2
+            \mathrm{Var}(\vec{x}) = \mathrm{mean}(x_1^2, \ldots, x_N^2) -
+            \mathrm{mean}(x_1, \ldots,  x_N)^2
           \end{equation*}
           Implement the \py{mean} function. Use that as an argument to the previously defined
           \py{func_square_difference} function to calculate and return the variance

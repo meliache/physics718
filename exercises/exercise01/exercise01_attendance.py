@@ -39,5 +39,9 @@ def sum_of_odds_builtins(num_odds):
     # return sum_of_odds
 
 
+def list_of_sum_of_odds(n):
+    return [sum_of_odds_while(i) for i in range(n)]
+
+
 if __name__ == "__main__":
     unittest.main(module="test_exercise01_attendance", verbosity=2)

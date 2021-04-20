@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 
 from exercise01_homework import (
-    calc_odd_fibonacci_numbers,
+    odd_fibonacci_numbers,
     func_square_difference,
     mean,
     sum_square_difference,
@@ -28,11 +28,11 @@ class TestExercise01Homework(unittest.TestCase):
             -760, -63, -165, -431, -150, -696, 355, -252, 352, -107, -793, 980, -464, 52, -519, 805, -922, -877, -955, 965, -367, -311, -355, -898, -680, -366, -536, -318, 799, 65, 481, -558, 232, -211, -363, -988, -695, -697, -646, -955, -512, 58, 591, 997, -284, -237, 585, 232, 34, -993, 391, 478, -853, -245, -303, 358, 842, -642, -448, -889, -222, 448, 403, 582, -44, -677, -820, -453, -288, -199, 194, 243, -362, 532, 617, 65, -675, 590, 536, -755, -378, 913, -728, 785, 973, -532, -874, -441, -204, -275, -531, -242, -569, -257, 867, -227, -833, 133, 936, -201  # noqa: B950
         ]
 
-    def test_calc_odd_fibonacci_numbers_all(self):
-        self.assertListEqual(calc_odd_fibonacci_numbers(len(self.odd_fib)), self.odd_fib)
+    def test_odd_fibonacci_numbers_all(self):
+        self.assertListEqual(odd_fibonacci_numbers(len(self.odd_fib)), self.odd_fib)
 
-    def test_calc_odd_fibonacci_numbers_first_element(self):
-        self.assertListEqual(calc_odd_fibonacci_numbers(1), self.odd_fib[0:1])
+    def test_odd_fibonacci_numbers_first_element(self):
+        self.assertListEqual(odd_fibonacci_numbers(1), self.odd_fib[0:1])
 
     def test_sum_square_difference(self):
         self.assertEqual(sum_square_difference(self.random_numbers), -157407938)

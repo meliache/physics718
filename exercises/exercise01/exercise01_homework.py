@@ -13,7 +13,7 @@ from exercise01_attendance import is_odd
 
 # homework problem 1
 
-def calc_odd_fibonacci_numbers(n_numbers):
+def odd_fibonacci_numbers(n_numbers):
     """
     Return a list of the first N odd fibonacci numbers
     """
@@ -34,7 +34,7 @@ def nth_fibonacci_number(number):
 
 def sum_square_difference(numbers):
     """
-    Return ∑(n²) - (∑n)² for n from 1 to ``numbers`
+    Return ∑(x_1²) - (∑x_n)²
     """
     # TODO
     pass
@@ -42,7 +42,9 @@ def sum_square_difference(numbers):
 
 def func_square_difference(func, numbers):
     """
-    Return func(1²...n²) - func(1...n)² for n from 1 to ``numbers``.
+    Return func(x_1²...x_n²) - func(x_1...x_n)²
+
+    :param func: And aggregating function that takes a list and returns a scalar number.
     """
     # TODO
     pass
@@ -55,8 +57,9 @@ def mean(numbers):
 
 
 def variance(numbers):
-    "Calculates the varianve of ``numbers``"
-    return func_square_difference(mean, numbers)
+    "Calculates the variance of ``numbers``"
+    # TODO
+    pass
 
 
 if __name__ == '__main__':

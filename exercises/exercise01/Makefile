@@ -45,8 +45,10 @@ $(PROJNAME).pdf: $(PROJNAME).tex
 
 cleanall:
 	latexmk -C
-	rm -vf *.aux  *.qsl  *.sol *_xdefs.cut *.bbl
+	rm -vf *.aux  *.qsl  *.sol *_xdefs.cut *.bbl *.pyg
 	rm -rfv _minted-exercise*
 
 clean:
 	latexmk -c
+	rm -vf *.aux  *.qsl  *.sol *_xdefs.cut *.bbl *.pyg
+	rm -rfv _minted-exercise*

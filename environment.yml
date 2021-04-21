@@ -15,6 +15,7 @@ dependencies:
   - numba=0.53.1  # just-in-time compilation of python
   - uproot=3.13.0  # read root files without having full ROOT installation
   - jupyterlab=3.0.12
+  - jupyter_console=6.0.0  # "jupyter console" command is a more modern alternative to ipython
   - pytest=6.2.3
   - testbook=0.2.6  # write unittests for functions in notebooks outside notebooks
   - uncertainties=3.1.5  # automatic uncertainty handling, not sure if I'll use that

@@ -91,16 +91,19 @@
 
     \begin{problem*}\textbf{Particle via inheritance}
 
-        Imagine a particle is described by its velocity vector and its mass, but
-        we are not interested in this position. Then, one can represent the
-        particle as sub-class of \py{Vector2D}. Mind that the x and y
-        should represent the particle velocity for the purpose of this problem.
+      Imagine that we want to describe a particle by its velocity vector and its
+      mass, but are not interested in its position. Then, we can implement a
+      particle as a sub-class of \py{Vector2D}. Go to section 3 in the notebook
+      and implement the \py{Particle} class.
+
+        Mind that the x and y should represent the particle velocity for the
+        purpose of this problem.
 
     \begin{parts}
       \item Implement an \py{__init__(self, vx, vy, mass)} method that sets the
         x/y-components of the super class and sets the mass property
         (hint: use \py{super().__init__}).
-      \item Implement the \py{momentum()} and an \py{energy()} methods. Note that
+      \item Implement the \py{momentum()} and \py{energy()} methods. Note that
         \py{momentum()} should return an instance of \py{Vector2D}
     \end{parts}
     \end{problem*}

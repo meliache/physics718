@@ -1,6 +1,7 @@
 # basic checks
+repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.4.0
+  rev: v4.0.1
   hooks:
   - id: check-yaml
   - id: trailing-whitespace
@@ -18,8 +19,8 @@
 #     language_version: python3.7
 
 # flake8 style checker
-- repo: https://gitlab.com/pycqa/flake8
-  rev: 3.9.0
+- repo: https://github.com/PyCQA/flake8
+  rev: 3.9.2
   hooks:
     - id: flake8
       exclude: docs/bld/example/r/r_example/src/documentation/conf.py
